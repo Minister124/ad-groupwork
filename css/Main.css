@@ -1,0 +1,94 @@
+﻿
+body {
+    overflow-x: hidden;
+}
+
+header {
+    background-color: #0EA3F6;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    height:100px;
+}
+.logo
+{
+    align-content:center;
+}
+
+.user-type {
+    background-color: #F2F2F2;
+    padding: 5px 10px;
+}
+
+header h1 {
+    font-family: Vivaldi;
+}
+
+
+
+#lblUser, #lblUsername, #lblType, #lblUserType {
+    font-size: 14px;
+}
+
+.sidebar {
+    height: 585px;
+    width: 201px;
+    overflow: auto;
+    position: absolute;
+    background-color: #0EA3F6;
+    border-top: 2px solid white;
+}
+
+    .sidebar a {
+        padding: 10px;
+        color: #ffffff;
+        display: block;
+        padding-left: 25px;
+        text-decoration: none;
+        text-transform: uppercase;
+    }
+
+        .sidebar a.active {
+            background-color: #263F8C;
+            color: white;
+        }
+
+        .sidebar a:hover:not(.active) {
+            background-color: #0A7FC0;
+            color: white;
+        }
+
+    .sidebar btn btn-danger btn-sm {
+        margin-left: 40px;
+    }
+
+.content {
+    margin-left: 200px;
+    height: 100%;
+}
+
+.sidebar a i {
+    margin-right: 11px;
+}
+
+@media screen and (max-width: 700px) {
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+    }
+
+        .sidebar a {
+            float: left;
+            padding: 10px;
+            font-size: 14px;
+        }
+
+            .sidebar a i {
+                display: none;
+            }
+
+    .content {
+        margin-left: 0;
+    }
+}

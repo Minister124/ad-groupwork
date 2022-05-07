@@ -1,0 +1,239 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Main.master.cs" Inherits="RopeyDVD.Main" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous" />
+    <link href="CSS/Main.css" rel="stylesheet" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style>
+        nav {
+            color: white;
+        }
+
+        .table td, .table th {
+            border: none;
+        }
+
+        .dropdown {
+            width: 196px;
+            height: 33px;
+            border-color: #720eb0;
+            color: #720eb0;
+        }
+
+
+        .site-footer {
+            background-color: #26272b;
+            padding: 45px 0 20px;
+            font-size: 15px;
+            line-height: 24px;
+            color: #737373;
+        }
+
+            .site-footer hr {
+                border-top-color: #bbb;
+                opacity: 0.5;
+            }
+
+                .site-footer hr.small {
+                    margin: 20px 0;
+                }
+
+            .site-footer h6 {
+                color: #fff;
+                font-size: 16px;
+                text-transform: uppercase;
+                margin-top: 5px;
+                letter-spacing: 2px;
+            }
+
+            .site-footer a {
+                color: #737373;
+            }
+
+                .site-footer a:hover {
+                    color: #3366cc;
+                    text-decoration: none;
+                }
+
+        .footer-links {
+            padding-left: 0;
+            list-style: none;
+        }
+
+            .footer-links li {
+                display: block;
+            }
+
+            .footer-links a {
+                color: #737373;
+            }
+
+                .footer-links a:active, .footer-links a:focus, .footer-links a:hover {
+                    color: #3366cc;
+                    text-decoration: none;
+                }
+
+            .footer-links.inline li {
+                display: inline-block;
+            }
+
+        .site-footer .social-icons {
+            text-align: right;
+        }
+
+            .site-footer .social-icons a {
+                width: 40px;
+                height: 40px;
+                line-height: 40px;
+                margin-left: 6px;
+                margin-right: 0;
+                border-radius: 100%;
+                background-color: #33353d;
+            }
+
+        .copyright-text {
+            margin: 0;
+        }
+
+        @media (max-width:991px) {
+            .site-footer [class^=col-] {
+                margin-bottom: 30px;
+            }
+        }
+
+        @media (max-width:767px) {
+            .site-footer {
+                padding-bottom: 0;
+            }
+
+                .site-footer .copyright-text, .site-footer .social-icons {
+                    text-align: center;
+                }
+        }
+
+        .social-icons {
+            padding-left: 0;
+            margin-bottom: 0;
+            list-style: none;
+        }
+
+            .social-icons li {
+                display: inline-block;
+                margin-bottom: 4px;
+            }
+
+                .social-icons li.title {
+                    margin-right: 15px;
+                    text-transform: uppercase;
+                    color: #96a2b2;
+                    font-weight: 700;
+                    font-size: 13px
+                }
+
+            .social-icons a {
+                background-color: #eceeef;
+                color: #818a91;
+                font-size: 16px;
+                display: inline-block;
+                line-height: 44px;
+                width: 44px;
+                height: 44px;
+                text-align: center;
+                margin-right: 8px;
+                border-radius: 100%;
+                -webkit-transition: all .2s linear;
+                -o-transition: all .2s linear;
+                transition: all .2s linear;
+            }
+
+                .social-icons a:active, .social-icons a:focus, .social-icons a:hover {
+                    color: #fff;
+                    background-color: #29aafe;
+                }
+
+            .social-icons.size-sm a {
+                line-height: 34px;
+                height: 34px;
+                width: 34px;
+                font-size: 14px;
+            }
+
+            .social-icons a.facebook:hover {
+                background-color: #3b5998;
+            }
+
+            .social-icons a.twitter:hover {
+                background-color: #00aced;
+            }
+
+            .social-icons a.linkedin:hover {
+                background-color: #007bb6;
+            }
+
+            .social-icons a.dribbble:hover {
+                background-color: #ea4c89;
+            }
+
+        @media (max-width:767px) {
+            .social-icons li.title {
+                display: block;
+                margin-right: 0;
+                font-weight: 600;
+            }
+        }
+        .auto-style2 {
+            align-content: center;
+            margin-left: 123px;
+            margin-top: 5px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <asp:Image ID="Image1" runat="server" ImageUrl="~/images/Frame 6.png" CssClass="auto-style2" Height="58px" Width="289px" />
+    </header>
+    <form id="formForMaster" runat="server">
+        <div class="user-type">
+             <div class="row">
+                <div class="col-sm-6">
+                    <i class="fas fa-user"></i>
+                    <asp:Label ID="lblUser" runat="server" Text="Welcome " style="font-weight: bold"></asp:Label>
+                    <asp:Label ID="lblUsername" runat="server" Text=""></asp:Label>
+                    <asp:Label ID="lblType" runat="server" Text=" User Type: " style="font-weight: bold"></asp:Label>
+                    <asp:Label ID="lblUserType" runat="server" Text=""></asp:Label>
+                </div>
+            </div>          
+        </div>
+
+         <div class="sidebar">
+            <a id="dashboard" href="AdminDashboard.aspx" runat="server"><i class="fas fa-home"></i>Dashboard</a>
+            <a id="actor" href="Actor.aspx" runat="server"><i class="fas fa-user"></i>Actor</a>
+            <a id="DVDCategory" href="DVDCategory.aspx" runat="server"><i class="fas fa-boxes"></i>DVDCategory</a>
+            <a id="DVDCopy" href="DVDCopy.aspx" runat="server"><i class="fas fa-shopping-cart"></i>DVDCopy</a>
+            <a id="Studio" href="Studio.aspx" runat="server"><i class="fas fa-store"></i>Studio</a>
+            <a id="producer" href="Producer.aspx" runat="server"><i class="fas fa-warehouse"></i>Producer</a>
+            <a id="loan" href="Loan.aspx" runat="server"><i class="fas fa-wallet"></i>Loan</a>
+            <a id="member" href="Member.aspx" runat="server"><i class="fas fa-chart-line"></i>Member</a>
+            <a id="membershipCategory" href="MembershipCategory.aspx" runat="server"><i class="fas fa-wallet"></i>Membership Category</a>
+            <a id="loanType" href="LoanType.aspx" runat="server"><i class="fas fa-chart-line"></i>Loan Type</a>
+            <a id="dvdtitle" href="DVDTitle.aspx" runat="server"><i class="fas fa-user-cog"></i>DVD Title</a>
+            <a id="castmember" href="CastMember.aspx" runat="server"><i class="fas fa-user-cog"></i>Cast Member</a>
+            <a id="user" href="User.aspx" runat="server"><i class="fas fa-user-cog"></i>Users</a>
+            <asp:Button ID="btnLogout" CssClass="btn btn-danger btn-sm" runat="server" Text="Logout" Height="34px" style="margin-left: 36px; margin-top: 23px" Width="104px" />
+        </div>
+
+        <div class="content">
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
